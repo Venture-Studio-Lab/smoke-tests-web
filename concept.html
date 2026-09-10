@@ -19,12 +19,15 @@
       <div class="card">
         <h2>Built around the narrow job</h2>
         <ul id="bullets"></ul>
+        <h3 id="whyTitle"></h3>
+        <p id="whyText"></p>
         <h3>What it deliberately does not try to be</h3>
-        <p>A full CRM, ERP, dispatch system or AI agent. The concept is intentionally narrow so a single user can start without implementation or a sales call.</p>
+        <p id="boundary"></p>
       </div>
       <div class="card">
         <h2>Early-access pricing test</h2>
         <p>Would you seriously consider this offer? <strong>No charge is made today.</strong></p>
+        <p id="freeTierNote" class="note hide"></p>
         <div class="price"><div class="plan"><span id="planName"></span><strong id="planPrice"></strong><small id="planDetail"></small></div></div>
         <button class="primary" id="reserve">Reserve early access — no charge today</button>
         <p class="note">This is a demand test for a product concept. Reserving does not create a purchase or subscription.</p>
@@ -33,7 +36,7 @@
           <label>Email</label><input required type="email" name="email" autocomplete="email">
           <label id="roleLabel"></label><select required name="role" id="roleSelect"><option value="">Select…</option></select>
           <label>What do you use today?</label>
-          <select required name="current_tool"><option value="">Select…</option><option>Spreadsheet</option><option>Paper / notes</option><option>Generic business software</option><option>Specialized software</option><option>Nothing consistent</option><option>Other</option></select>
+          <select required name="current_tool" id="toolSelect"><option value="">Select…</option></select>
           <label>How often do you do this job?</label>
           <select required name="frequency"><option value="">Select…</option><option>Daily</option><option>Several times a week</option><option>Weekly</option><option>Several times a month</option><option>Monthly or less</option></select>
           <label class="consent-row"><input required type="checkbox" name="consent" value="yes"><span>I agree to provide my email and experiment answers for concept validation and possible early-access follow-up. <a href="/privacy.html" target="_blank" rel="noopener">Privacy notice</a>.</span></label>
