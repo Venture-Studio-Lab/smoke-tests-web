@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Early-access concept</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="top"><div class="wrap"><span class="badge" id="rootBadge">Experiment</span><span class="badge">Early-access concept</span> Not yet released.</div></div>
+  <main id="conceptApp" class="hide">
+    <section class="hero"><div class="wrap">
+      <div class="kicker" id="audience"></div>
+      <h1 id="headline"></h1>
+      <p class="lede" id="subheadline"></p>
+    </div></section>
+    <section><div class="wrap grid">
+      <div class="card">
+        <h2>Built around the narrow job</h2>
+        <ul id="bullets"></ul>
+        <h3>What it deliberately does not try to be</h3>
+        <p>A full CRM, ERP, dispatch system or AI agent. The concept is intentionally narrow so a single user can start without implementation or a sales call.</p>
+      </div>
+      <div class="card">
+        <h2>Early-access pricing test</h2>
+        <p>Would you seriously consider this offer? <strong>No charge is made today.</strong></p>
+        <div class="price"><div class="plan"><span id="planName"></span><strong id="planPrice"></strong><small id="planDetail"></small></div></div>
+        <button class="primary" id="reserve">Reserve early access — no charge today</button>
+        <p class="note">This is a demand test for a product concept. Reserving does not create a purchase or subscription.</p>
+        <form class="form" id="reserveForm">
+          <h3>Reserve your spot</h3>
+          <label>Email</label><input required type="email" name="email" autocomplete="email">
+          <label id="roleLabel"></label><select required name="role" id="roleSelect"><option value="">Select…</option></select>
+          <label>What do you use today?</label>
+          <select required name="current_tool"><option value="">Select…</option><option>Spreadsheet</option><option>Paper / notes</option><option>Generic business software</option><option>Specialized software</option><option>Nothing consistent</option><option>Other</option></select>
+          <label>How often do you do this job?</label>
+          <select required name="frequency"><option value="">Select…</option><option>Daily</option><option>Several times a week</option><option>Weekly</option><option>Several times a month</option><option>Monthly or less</option></select>
+          <label class="consent-row"><input required type="checkbox" name="consent" value="yes"><span>I agree to provide my email and experiment answers for concept validation and possible early-access follow-up. <a href="/privacy.html" target="_blank" rel="noopener">Privacy notice</a>.</span></label>
+          <button class="primary" type="submit">Confirm reservation</button>
+          <div class="status" id="status"></div>
+        </form>
+      </div>
+    </div></section>
+  </main>
+  <main id="invalidApp" class="wrap gate hide"><h1>Experiment link not found</h1><p class="lede">This controlled validation page requires a valid campaign link.</p></main>
+  <footer class="footer"><div class="wrap">Concept validation only. No payment is collected. No affiliation with employers, trade bodies or certification owners is implied.</div></footer>
+  <script src="/concepts.js"></script>
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
