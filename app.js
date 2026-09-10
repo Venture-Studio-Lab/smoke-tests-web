@@ -14,7 +14,7 @@ if(!/^[0-9a-f-]{36}$/i.test(sessionId||"")){sessionId=uuid();window.name=prefix+
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0};
 const forced=qs.get("variant");
 const plan=cfg.plans.find(p=>p.id===forced)||cfg.plans[hash(sessionId)%cfg.plans.length];
-const tc=()=>["professional","diy","unknown"].includes((qs.get("tc")||"").toLowerCase())?(qs.get("tc")||"").toLowerCase():"unknown";
+const tc=()=>["targeted","adjacent","unknown"].includes((qs.get("tc")||"").toLowerCase())?(qs.get("tc")||"").toLowerCase():"unknown";
 const attr=()=>({source:cut(qs.get("utm_source"),120),medium:cut(qs.get("utm_medium"),120),campaign:cut(qs.get("utm_campaign"),160),term:cut(qs.get("utm_term"),200)});
 const api=`${env.supabaseUrl}/rest/v1`;
 async function insert(table,row){return fetch(`${api}/${table}`,{method:"POST",headers:{apikey:env.publishableKey,"Content-Type":"application/json",Prefer:"return=minimal"},body:JSON.stringify(row),keepalive:true})}
